@@ -1,13 +1,18 @@
 #include <stdio.h>
 
+float calcular_imc(float peso, float altura) {
+    return peso / (altura * altura);
+}
+
 int main() {
     float peso, altura, imc;
+
     printf("Digite o peso (kg): ");
     scanf("%f", &peso);
     printf("Digite a altura (m): ");
     scanf("%f", &altura);
 
-    imc = peso / (altura * altura);
+    imc = calcular_imc(peso, altura); 
 
     printf("IMC: %.2f - ", imc);
     if (imc < 18.5) printf("Abaixo do peso\n");

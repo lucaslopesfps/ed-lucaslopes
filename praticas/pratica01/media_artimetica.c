@@ -1,8 +1,14 @@
 #include <stdio.h>
 
+
+float calcular_media(float soma, int n) {
+    return soma / n;
+}
+
 int main() {
     int n;
     float numero, soma = 0;
+
     printf("Quantos numeros (max 100)? ");
     scanf("%d", &n);
 
@@ -17,6 +23,6 @@ int main() {
         soma += numero;
     }
 
-    printf("Media: %.2f\n", soma / n);
+    printf("Media: %.2f\n", calcular_media(soma, n)); 
     return 0;
 }
